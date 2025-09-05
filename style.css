@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000; 
+    background-image: url("bgimg.jpg"); /* Path to image */
+    background-repeat: no-repeat;           /* Prevents tiling */
+    background-size: cover;                 /* Makes image cover the whole page */
+    background-position: center; 
+
+}
+
+.maincontainer{
+    max-width: 370px;
+    width: 100%;
+    background-color: #ffffffa9;
+    box-shadow: 0 5px 10px  rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.maincontainer::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 24px 24px 0 0;
+    height: 37%;
+    width: 100%;
+    background-color: #930b2f;
+}
+
+.profile-img {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 3px;
+    background-color: #000000;
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin: 20px;
+    transition: 0.2s;
+}
+
+.profile-img .image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #000000;
+}
+
+.profile-img:hover{
+    scale: 1.15;
+}
+
+.maincontainer .data{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.data .name
+{
+    font-size: 25px;
+    font-weight: 750;
+}
+
+.data .job
+{
+    font-size: 18px;
+    font-weight: 550;
+}
+.data .social
+{
+    font-size: 15px;
+    font-weight: 280;
+}
+.maincontainer .icons{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.maincontainer .icons .link{
+    text-decoration: none;
+    background-color: #000202;
+    margin: 0 8px;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.2s;
+}
+
+.maincontainer .icons .link:hover{
+    scale: 1.25;
+}
+
+.maincontainer .buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.maincontainer .buttons .button{
+    border-radius: 24px;
+    margin: 0 10px;
+    padding: 8px 24px;
+    background-color: #50018c85;
+    cursor: pointer;
+    border: 2px solid #fff;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    margin: 0 10px;
+    font-weight: 600;
+    transition: all 0.2s ease-in;
+}
+
+.maincontainer .buttons .button:hover{
+    scale: 1.15;
+    background-color: #000000;
+}
+
+.maincontainer .reacts{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.maincontainer .reacts .react{
+    display: flex;
+    align-items: center;
+    color: #333;
+    padding: 0 20px;
+    border-right: 2px solid #b6b1b1;
+    /* cursor: pointer; */
+}
+
+.maincontainer .reacts .react i{
+    font-size: 18px;
+    margin-right: 6px;
+}
+
+.maincontainer .reacts .react:last-child
+{
+    border-right: none;
+}
